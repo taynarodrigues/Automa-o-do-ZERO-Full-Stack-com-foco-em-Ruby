@@ -12,23 +12,26 @@
 # end
 
 class Conta
-	attr_accessor :saldo
+	attr_accessor :saldo, :nome
+
+	#Construtor
+	def initialize(nome)
+		self.saldo = 0.0
+		self.nome = nome
+	end
 
 	def deposita(valor)
-		# puts valor.class ->Definir o tipo
 		self.saldo += valor
 		puts "Depositando a quantida de #{valor} reais"
 	end
 end
 
-c = Conta.new
+c = Conta.new('Papito')
 
-#Qual o tipo do saldo
-# puts c.saldo.class
-
-#Inicializar saldo
-c.saldo = 0.0
 c.deposita(100.00)
-
 #Verificar o valor do saldo
 puts c.saldo
+
+c.deposita(10.00)
+puts c.saldo
+puts c.nome
