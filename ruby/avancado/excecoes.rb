@@ -14,7 +14,7 @@ def soma(n1, n2)
 	n1 + n2
 rescue Exception => e
 	puts e.message
-	puts 'Erro ao executar a soma'
+	puts 'Erro ao executar a soma' #mensagem customizada
 end
 
 soma('10', 5)
