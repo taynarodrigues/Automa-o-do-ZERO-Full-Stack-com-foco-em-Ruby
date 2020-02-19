@@ -22,11 +22,11 @@ class Conta
 
 	def deposita(valor)
 		self.saldo += valor
-		puts "Depositando a quantida de #{valor} reais"
+		puts "Depositando a quantida de #{valor} reais na conta do #{self.nome}."
 	end
 end
 
-c = Conta.new('Papito')
+c = Conta.new('Papito') #passar o argumento no momento de instanciar a classe
 
 c.deposita(100.00)
 #Verificar o valor do saldo
