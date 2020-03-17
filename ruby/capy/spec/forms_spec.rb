@@ -36,7 +36,7 @@ describe 'Forms' do
 
 		visit 'http://training-wheels-protocol.herokuapp.com/login' 
 
-		fill_in 'username',	with: 'Tay' 
+		fill_in 'userId',	with: 'Tay' 
 		fill_in 'password', with: 'jarvis!'
 
 		click_button 'Login'
