@@ -1,5 +1,5 @@
 
-describe 'Caixa de seleção', :dropdown do
+describe 'Caixa de opções', :dropdown do
 
 	it 'item especifico' do
 
@@ -20,8 +20,7 @@ describe 'Caixa de seleção', :dropdown do
 	it 'qualquer item', :sample do
 		visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
 		drop = find('.avenger-list')
-		drop = find('option', text: 'Scott Lang').select_option
-		#drop.all('option').sample.select_option
+		drop.all('option').sample.select_option
 				sleep 3 #temporario
 	end
 end
