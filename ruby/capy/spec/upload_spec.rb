@@ -18,12 +18,14 @@ describe 'Upload', :upload do
 		expect(div_arquivo.text).to eql 'arquivo.txt'
 end
 
-it 'upload de imagem' do
+it 'upload de imagem', :upload_imagem do
 
 		attach_file('file-upload', @imagem) #	attach_file -> Faz o Upload
 		click_button 'Upload'
 
-		sleep 5
+		# puts Capybara.default_max_wait_time -> atributo que aguarda até 2 segundos p/ executar
+
+		# sleep 5
 		img = find('#new-image') # Buscando elemento q possui o id="new-img"
 		expect(img[:src]).to include 'uploads/imagem.png' #verifica se no atributo [:src] contém 'imagem.png'
 end
