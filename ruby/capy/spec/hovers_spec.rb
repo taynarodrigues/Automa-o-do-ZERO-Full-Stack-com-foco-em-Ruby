@@ -6,7 +6,8 @@ describe 'Mouse Hover', :hovers do
 
 	it 'quando passo o mouse do Blade' do
 		#find mais seletor css
-		card = find('img[alt=Blade]')
+		#Usando expressão Regular cujo o valor de alt contém Blade, passando o acento asteristico
+		card = find('img[alt*=Blade]')
 		card.hover
 
 		expect(page).to have_content 'Nome: Blade'
@@ -14,15 +15,17 @@ describe 'Mouse Hover', :hovers do
 
 	it 'quando passo o mouse do Pantera Negra' do
 
-		card = find('img[alt="Pantera Negra"]')
+		#Usando expressão Regular cujo valor de alt começa com Pantera, passando o acento circunflexo antes do igual.
+		card = find('img[alt^=Pantera]')
 		card.hover
 
 		expect(page).to have_content 'Nome: Pantera Negra'
 	end
 
+
 	it 'quando passo o mouse no Homem Aranha' do
-		
-		card = find('img[alt="Homem Aranha"]')
+			#Usando expressão Regular cujo o valor de alt termina com Aranha, passando o símbolo dólar antes do igual
+		card = find('img[alt$=Aranha]')
 		card.hover
 
 		expect(page).to have_content 'Nome: Homem Aranha'
