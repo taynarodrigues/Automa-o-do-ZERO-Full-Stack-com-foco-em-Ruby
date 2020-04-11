@@ -4,18 +4,15 @@ module Enjoeat
             'Virado a Paulista'
         elsif dia == 'terça-feira'
             'Dobradinha'
+        elsif dia == 'quarta-feira'
+            'Feijoada'
         end
     end
 end
 World Enjoeat
 
-
-Dado("que hoje é segunda-feira") do
-    @hoje = 'segunda-feira'
-end
-
-Dado("que hoje é terça-feira") do
-    @hoje = 'terça-feira'
+Dado("que hoje é {string}") do |dia|
+    @hoje = dia 
 end
 
 Quando("eu pergunto qual é o prato do dia") do

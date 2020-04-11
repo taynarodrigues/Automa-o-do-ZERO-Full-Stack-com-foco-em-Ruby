@@ -6,12 +6,19 @@ Funcionalidade: Qual é o prato do Dia
 
     Cenario: Hoje é dia de Virado a Paulista 
 
-        Dado que hoje é segunda-feira  
+        Dado que hoje é "segunda-feira"  
         Quando eu pergunto qual é o prato do dia
         Então a resposta deve ser "Virado a Paulista"
 
     Cenario: Hoje é dia de Dobradinha
 
-    Dado que hoje é terça-feira
-    Quando eu pergunto qual é o prato do dia
-    Então a resposta deve ser "Dobradinha"
+        Dado que hoje é "terça-feira"
+        Quando eu pergunto qual é o prato do dia
+        Então a resposta deve ser "Dobradinha"
+
+    Cenario: Hoje é dia de feijoada
+
+        Dado que hoje é "quarta-feira"
+        Quando eu pergunto qual é o prato do dia
+        Então a resposta deve ser "Feijoada"
+
