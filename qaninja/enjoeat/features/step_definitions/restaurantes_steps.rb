@@ -17,15 +17,10 @@ Então("cada restaurante deve exibir sua categoria") do
   restaurants = all('.restaurant-item')
 
   puts '#### CATEGORIAS ######'
-  restaurant_data.each do |value|   
-    puts value[:category]
+  restaurant_data.each_with_index do |value, index|   #o with_inde trás o valor do índice
+    puts value[:category] #busca do elemento da categoria
+    puts restaurants[index].text #busca do elemento na posição
   end
-
-  puts '#### PRIMEIRO ITEM ######'
-  puts restaurants[0].text
-  puts '#### SEGUNDO TEMPO ######'
-  puts restaurants[1].text 
-  
 end
 
 Então("cada restaurante deve exibir o tempo de entrega") do
