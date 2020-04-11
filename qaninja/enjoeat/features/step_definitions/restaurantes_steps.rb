@@ -12,14 +12,14 @@ Então("cada restaurante deve exibir sua categoria") do
   restaurant_data = [
     {name: 'Bread & Bakery', category: 'Padaria', delivery_time: '25 minutos', rating: 4.9 }, #massa de testes
     {name: 'Burger House', category: 'Hamburgers', delivery_time: '30 minutos', rating: 3.5 },
+    {name: 'Coffee', category: 'Cafeteria', delivery_time: '20 minutos', rating: 4.8 },
+
   ]
 
   restaurants = all('.restaurant-item')
 
-  puts '#### CATEGORIAS ######'
-  restaurant_data.each_with_index do |value, index|   #o with_inde trás o valor do índice
-    puts value[:category] #busca do elemento da categoria
-    puts restaurants[index].text #busca do elemento na posição
+  restaurant_data.each_with_index do |value, index|
+    expect(restaurants[index]).to have_text value[:category]
   end
 end
 
