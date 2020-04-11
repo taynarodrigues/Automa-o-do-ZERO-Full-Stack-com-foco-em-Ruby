@@ -1,14 +1,20 @@
-Quando("acesso a lista de restaurantes") do
-  visit '/restaurants'
+Dado("que temos os seguintes restaurantes") do |table|
+    # puts table.hashes #converter a tabela em um objeto ruby que é um hashes
+    # puts table.class #Cucumber::MultilineArgument::DataTable
+    @restaurant_data = table.hashes
 end
 
-Entao("cada restaurante deve ter {int} {string} {string} {string} {float}") do |id, name, category, delivery_time, rating|
+Quando("acesso a lista de restaurantes") do
+    visit '/restaurants'
+end
+
+Entao("devo ver todos os restaurantes desta lista") do
     restaurants = all('.restaurant-item')
 
-    expect(restaurants[id]).to have_text name.upcase
-    expect(restaurants[id]).to have_text category
-    expect(restaurants[id]).to have_text delivery_time
-    expect(restaurants[id]).to have_text rating
-
-    sleep 2
+    @restaurant_data.each_with_index do |value, index|
+      expect(restaurants[index]).to have_text value['nome'].upcase
+      expect(restaurants[index]).to have_text value['categoria']
+      expect(restaurants[index]).to have_text value['entrega']
+      expect(restaurants[index]).to have_text value['avaliacao']
+    end
 end
