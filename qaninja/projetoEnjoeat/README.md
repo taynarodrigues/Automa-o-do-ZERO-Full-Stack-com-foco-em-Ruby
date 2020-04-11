@@ -10,11 +10,11 @@ Primeiramente vamos instalar o Nodejs
 Nos tutoriais abaixo temos instalação do Ruby e Nodejs (Você poderá pular a instalação do Ruby e seguir somente com Nodejs, ou atualizar sua versão do Ruby)
 
 
-- 💹 **No Windows** — [Windows](http://blog.qaninja.io/instalando-ruby-e-nodejs-no-windows/)
+- 💹 **No Windows** — (http://blog.qaninja.io/instalando-ruby-e-nodejs-no-windows/)
 
-- 💹 **No Linux** — [Linux](http://blog.qaninja.io/instalando-ruby-e-nodejs-no-linux/)
+- 💹 **No Linux** — (http://blog.qaninja.io/instalando-ruby-e-nodejs-no-linux/)
 
-- 💹 **No Mac** — [Mac](http://blog.qaninja.io/instalando-o-ruby-e-nodejs-no-macos/)
+- 💹 **No Mac** — (http://blog.qaninja.io/instalando-o-ruby-e-nodejs-no-macos/)
 
 
 Para verificar se deu tudo certo, digite o comando:
