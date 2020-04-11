@@ -5,11 +5,13 @@ Funcionalidade: Restaurantes
     Sendo um usuário que deseja pedir comida
     Posso acessar a lista de restaurantes
 
+    @temp
     Cenario: Todos os restaurantes
 
         Quando acesso a lista de restaurantes
         Então vejo todas as opções disponíveis
 
+   
     Cenario: Categorias
 
         Quando acesso a lista de restaurantes
@@ -24,3 +26,7 @@ Funcionalidade: Restaurantes
 
         Quando acesso a lista de restaurantes
         Então cada restaurante deve exibir sua nota de avaliação
+
+
+
+
