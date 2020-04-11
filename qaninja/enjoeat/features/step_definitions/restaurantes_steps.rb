@@ -1,6 +1,4 @@
 Dado("que temos os seguintes restaurantes") do |table|
-    # puts table.hashes #converter a tabela em um objeto ruby que é um hashes
-    # puts table.class #Cucumber::MultilineArgument::DataTable
     @restaurant_data = table.hashes
 end
 
