@@ -3,14 +3,29 @@ Quando("acesso a lista de restaurantes") do
 end
 
 Então("vejo todas as opções disponíveis") do
-  restaurantes = all('.restaurant-item') #o método all devolve uma coleção de elementos (array)
-  # puts restaurantes.size #o método size trás a quantidade de item
-  # puts restaurantes.class #o método class devolve o tipo
-  expect(restaurantes.size).to be > 0 #Confirma se a quantidade é maior que zero
+  restaurantes = all('.restaurant-item')
+  expect(restaurantes.size).to be > 0 
 end
 
 Então("cada restaurante deve exibir sua categoria") do
-  pending # Write code here that turns the phrase above into concrete actions
+  
+  restaurant_data = [
+    {name: 'Bread & Bakery', category: 'Padaria', delivery_time: '25 minutos', rating: 4.9 }, #massa de testes
+    {name: 'Burger House', category: 'Hamburgers', delivery_time: '30 minutos', rating: 3.5 },
+  ]
+
+  restaurants = all('.restaurant-item')
+
+  puts '#### CATEGORIAS ######'
+  restaurant_data.each do |value|   
+    puts value[:category]
+  end
+
+  puts '#### PRIMEIRO ITEM ######'
+  puts restaurants[0].text
+  puts '#### SEGUNDO TEMPO ######'
+  puts restaurants[1].text 
+  
 end
 
 Então("cada restaurante deve exibir o tempo de entrega") do
