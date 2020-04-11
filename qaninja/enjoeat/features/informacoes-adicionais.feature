@@ -5,10 +5,13 @@ Funcionalidade: Informações Adicionais
     Sendo um usuario que escolheu um restaurante
     Posso ver a categoria, descrição detalhada e horarios de funcionamento
 
-    Cenário: detalhes do restaurante
+    @infos
+    Cenário: Detalhes do restaurante
 
-        Quando eu acesso um restaurante
-        Então eu vejo a sua categoria
-        E vejo a descrição detalhada
-        E vejo também o horario de funcionamento
+        Dados que acesso a lista de restaurantes
+        Quando eu escolho o restaurante "Burger House"
+        Então eu vejo as seguintes informações adicionais:
+            | categoria | Hamburgers                              |
+            | descricao | 40 anos se especializando em trash food. |
+            | horarios  | Funciona todos os dias, de 10h às 22h   |
 
