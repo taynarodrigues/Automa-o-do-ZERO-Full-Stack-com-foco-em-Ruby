@@ -13,7 +13,7 @@ Funcionalidade: Remover do carrinho
             | Donut                  | R$ 2,50  | 1          |
             | Pão Artesanal Italiano | R$ 15,90 | 1          |
         
- 
+  
     Esquema do Cenario: Remover item
 
         Dado eu removo somente o <item>
@@ -25,8 +25,6 @@ Funcionalidade: Remover do carrinho
         | 1    | "R$ 24,60" |
         | 2    | "R$ 11,20" |
 
-
     Cenario: Remover todos os itens
-
         Quando eu removo todos os itens
         Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"

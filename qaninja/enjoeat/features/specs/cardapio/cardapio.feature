@@ -1,6 +1,6 @@
 #language: pt
 
-@temp
+
 Funcionalidade: Cardápio
     Para que eu possa decidir o que pretendo comer
     Sendo um usuário que escolheu um restaurante
