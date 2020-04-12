@@ -71,6 +71,10 @@ Quando("eu removo todos os itens") do
     end
 end
 
+Quando("eu limpo o meu carrinho") do
+    click_button "Limpar"
+end
+
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
     cart = find("#cart")
     expect(cart).to have_text mensagem

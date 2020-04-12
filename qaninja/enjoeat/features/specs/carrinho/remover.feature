@@ -28,3 +28,9 @@ Funcionalidade: Remover do carrinho
     Cenario: Remover todos os itens
         Quando eu removo todos os itens
         Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"
+    
+    @temp
+    Cenario: Limpar carrinho
+
+        Quando eu limpo o meu carrinho
+        Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio"
