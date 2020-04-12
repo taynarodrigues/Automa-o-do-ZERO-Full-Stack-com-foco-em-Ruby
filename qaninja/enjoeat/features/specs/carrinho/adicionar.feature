@@ -1,5 +1,9 @@
 #language: pt
 
+#executando somente a estória Adicionar ao Carrinho escrever
+#cucumber + o caminho relativo do arquivo adicionar.feature 
+#como no exemplo: cucumber features/specs/carrinho/adicionar.feature
+@bread_bakery 
 Funcionalidade: Adicionar ao carrinho
     Para que eu possa finalizar uma compra 
     Sendo um cliente que já decidiu o que deseja comer

@@ -37,7 +37,10 @@ npm start
 ```
 Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 1** disponível em `localhost:3000`
 
-<h1 align="center"><img align="center" src="../../imagem/restaurante.png" alt="Enjoeat-Restaurantes"></img></h1>
+<h1 align="center"><img align="center" src="../imagem/restaurante.png" alt="Enjoeat-Restaurantes"></img></h1>
+
+
+
 
 ### Configurando o Enjoeat no seu computador local - segunda parte do curso
 Para iniciar descompacte no seu diretório o arquivo **enjoeat-sp2.zip** dentro da pasta **projetoEnjoeat**
@@ -53,6 +56,30 @@ npm start
 Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 2** disponível em `localhost:3000`
 
 <h1 align="center"><img align="center" src="../imagem/cardapioInformacoes.png" alt="Enjoeat-Informações-Cardápio"></img></h1>
+
+
+
+
+### Configurando o Enjoeat no seu computador local - terceira parte do curso
+Para iniciar descompacte no seu diretório o arquivo **enjoeat-sp3.zip** dentro da pasta **projetoEnjoeat**
+Para rodar o **Enjoeat** utilize os comandos para ele instalar todas as dependências do enjoeat que no caso é o: express, json-server, nodemon
+```bash
+cd qaninja
+cd projetoEnjoeat
+cd enjoeat-sp3
+cd enjoeat-sp3
+npm install
+npm start
+```
+Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 2** disponível em `localhost:3000`
+
+<h1 align="center"><img align="center" src="../imagem/carrinho.png" alt="Enjoeat-Carrinho"></img></h1>
+
+
+
+
+
+
 
 ----------
 Feito com ♥ by Tayna Rodrigues - Manaus-AM  👋 

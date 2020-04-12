@@ -71,10 +71,16 @@ Na sequencia temos os  cenários, que são exemplos concretos que ilustram como 
 
 Por fim temos os steps **Quando** e **Então** que são os passos do nosso cenário. Isto é o que Cucumber irá executar.
 ```bash
-Quando fazemos o Desenvolvimento Orientado por Comportamento com o Cucumber, usamos exemplos concretos para especificar o que queremos que o software faça. 
-Os cenários são gravados antes do código de produção. Eles começam sua vida como uma especificação executável . À medida que o código de produção surge, os cenários assumem um papel como documentação viva e testes automatizados .
+Quando fazemos o Desenvolvimento Orientado por Comportamento com o Cucumber, usamos exemplos concretos para 
+
+especificar o que queremos que o software faça. Os cenários são gravados antes do código de produção. 
+
+Eles começam sua vida como uma especificação executável . À medida que o código de produção surge, os cenários 
+
+assumem um papel como documentação viva e testes automatizados .
 ```
 Pronto, agora podemos começar a trabalhar com especificação e automação para projetos ágeis.
+
 
 
 
