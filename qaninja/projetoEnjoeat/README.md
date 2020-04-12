@@ -71,7 +71,7 @@ cd enjoeat-sp3
 npm install
 npm start
 ```
-Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 2** disponível em `localhost:3000`
+Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 3** disponível em `localhost:3000`
 
 <h1 align="center"><img align="center" src="../imagem/carrinho.png" alt="Enjoeat-Carrinho"></img></h1>
 
