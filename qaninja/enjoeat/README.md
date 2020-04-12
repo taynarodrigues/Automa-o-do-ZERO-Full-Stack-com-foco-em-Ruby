@@ -27,7 +27,7 @@ Instale todas as dependências e crie um projeto **Cucumber**:
 bundle install
 cucumber --init
 ```
-<h1 align="center"><img align="center" src="./imagem/gemInstall.png" alt="gem install cucumber"></img></h1>
+<h1 align="center"><img align="center" src="../imagem/gemInstall.png" alt="gem install cucumber"></img></h1>
 
 
 Dentro da pasta **features**, crie um arquivo chamado **restaurantes.feature** e dentro dele, escreva a seguinte **especificação**:

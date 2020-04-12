@@ -55,11 +55,9 @@ Dado("que eu tenho os seguintes itens no carrinho") do |table|
             find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
         end
     end
-    sleep 10
 end
-  
-  Quando("eu removo somente o item {int}") do |item|
+
+  Dado("eu removo somente o {int}") do |item|
     cart = find("#cart")
-    cart.all("table tbody tr")[item].find(".danger").click # código do DQuery $('#cart table tbody tr')[0]; código .danger é a classe de remover do carrinho
-    sleep 5
+    cart.all("table tbody tr")[item].find(".danger").click
   end
