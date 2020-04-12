@@ -22,6 +22,7 @@ Então("o valor total deve ser de {string}") do |valor_total|
     cart = find('#cart')
     total = cart.find('tr', text: 'Total').find('td') 
     expect(total.text).to eql valor_total
+    sleep 5
 end
 
 # Lista de Produtos
@@ -32,13 +33,17 @@ Dado("que os produtos desejados são:") do |table|
 end
 
 Quando("eu adiciono todos os itens") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @product_list.each do |p| #argumento p e pegar a chave pelo nome: p["nome"]
+            p["quantidade"].to_i.times do #to_i.times -> converte para string  e passar a ser um valor inteiro
+                find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
+                sleep 2
+        end
+    end
 end
 
 Então("vejo todos os itens no carrinho") do
-    pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então("o valor total deve sr de {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+    cart = find('#cart')
+    @product_list.each do |p|
+        expect(cart).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
+    end
 end
