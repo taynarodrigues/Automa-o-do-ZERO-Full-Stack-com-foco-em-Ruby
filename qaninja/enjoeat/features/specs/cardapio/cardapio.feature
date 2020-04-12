@@ -15,8 +15,10 @@ Funcionalidade: Cardápio
             | Batatas Fritas | Batatas fritas crocantes        | R$ 5,50 |
             | Refrigerante   | O refri mais gelado da cidade.  | R$ 4,50 |
 
+    @temp
     Cenário: Carrinho vazio
 
+        Dados que acesso a lista de restaurantes
         Quando eu escolho o restaurante "Burger House"
         Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"
             

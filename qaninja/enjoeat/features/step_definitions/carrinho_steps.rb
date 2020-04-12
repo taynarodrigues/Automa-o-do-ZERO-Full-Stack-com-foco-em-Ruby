@@ -66,7 +66,6 @@ end
 
 Quando("eu removo todos os itens") do
     @product_list.each_with_index do |value, indx| 
-        puts indx
         cart = find("#cart")
         cart.all("table tbody tr")[indx].find(".danger").click
     end
@@ -75,5 +74,4 @@ end
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
     cart = find("#cart")
     expect(cart).to have_text mensagem
-    sleep 5
 end
