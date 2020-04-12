@@ -76,6 +76,24 @@ Assim que o processo terminar, abra o seu navegador a página http://localhost:3
 <h1 align="center"><img align="center" src="../imagem/carrinho.png" alt="Enjoeat-Carrinho"></img></h1>
 
 
+### Configurando o Enjoeat no seu computador local - quarta e última parte do curso
+Para iniciar descompacte no seu diretório o arquivo **enjoeat-sp4.zip** dentro da pasta **projetoEnjoeat**
+Para rodar o **Enjoeat** utilize os comandos para ele instalar todas as dependências do enjoeat que no caso é o: express, json-server, nodemon
+```bash
+cd qaninja
+cd projetoEnjoeat
+cd enjoeat-sp4
+cd enjoeat-sp4
+npm install
+npm start
+```
+Assim que o processo terminar, abra o seu navegador a página http://localhost:3000 contendo o Projeto **Enjoeat Sprint 4** disponível em `localhost:3000`
+
+<h1 align="center"><img align="center" src="../imagem/fecharPedido.png" alt="Enjoeat-Fechar Pedido"></img></h1>
+
+<h1 align="center"><img align="center" src="../imagem/pedidoConcluido.png" alt="Enjoeat-Pedido Conclluído"></img></h1>
+
+
 
 
 
