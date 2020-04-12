@@ -49,12 +49,10 @@ end
 
 Dado("que eu tenho os seguintes itens no carrinho") do |table|
     @product_list = list = table.hashes
-    puts @product_list
-        @product_list.each do |p|
-            p["quantidade"].to_i.times do 
-            find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
-        end
-    end
+    #utilizando um recurso novo
+    steps %{
+        Quando eu adiciono todos os itens
+    }
 end
 
 Dado("eu removo somente o {int}") do |item|
