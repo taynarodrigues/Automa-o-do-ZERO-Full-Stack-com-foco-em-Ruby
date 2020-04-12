@@ -14,10 +14,13 @@ Então("deve ser adicionado {int} unidade deste item") do |quantidade|
     cart = find('#cart')
     expect(cart).to have_text "(#{quantidade}x) #{@produto_nome}" # (1x) Cup Cake #Usando interpolação de string para monta uma verificação
     puts "(#{quantidade}x) #{@produto_nome}"
-    sleep 5
-
 end
 
-Então("o valor total deve ser de {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Então("o valor total deve ser de {string}") do |valor_total|
+    cart = find('#cart')
+    total = cart.find('tr', text: 'Total').find('td')  # $('#cart tr:contains("Total:") td'); -> replicando código de DQuery
+    expect(cart).to have_text valor_total
+    puts total.text
+    puts valor_total
+    sleep 5
 end
