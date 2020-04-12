@@ -22,23 +22,20 @@ Então("o valor total deve ser de {string}") do |valor_total|
     cart = find('#cart')
     total = cart.find('tr', text: 'Total').find('td') 
     expect(total.text).to eql valor_total
-    sleep 5
 end
 
 # Lista de Produtos
 
 Dado("que os produtos desejados são:") do |table|
-    @product_list = table.hashes #método do cucumber, transforma um array em hashes
-    puts @product_list #-> mostra a transformação de um arrary hashes listando todos os produtos : [{"nome"=>"Cup Cake", "preco"=>"R$ 8,70"}, {"nome"=>"Donut", "preco"=>"R$ 2,50"}, {"nome"=>"Pão Artesanal Italiano", "preco"=>"R$ 15,90"}]
+    @product_list = table.hashes 
 end
 
 Quando("eu adiciono todos os itens") do
-    @product_list.each do |p| #argumento p e pegar a chave pelo nome: p["nome"]
-            p["quantidade"].to_i.times do #to_i.times -> converte para string  e passar a ser um valor inteiro
-                find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
-                sleep 2
-        end
-    end
+    @product_list.each do |p|
+         p["quantidade"].to_i.times do 
+           find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
+      end
+  end
 end
 
 Então("vejo todos os itens no carrinho") do
