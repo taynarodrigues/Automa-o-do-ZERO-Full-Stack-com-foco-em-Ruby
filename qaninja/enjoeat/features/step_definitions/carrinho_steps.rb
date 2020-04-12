@@ -57,7 +57,23 @@ Dado("que eu tenho os seguintes itens no carrinho") do |table|
     end
 end
 
-  Dado("eu removo somente o {int}") do |item|
+Dado("eu removo somente o {int}") do |item|
     cart = find("#cart")
     cart.all("table tbody tr")[item].find(".danger").click
-  end
+end
+
+#Remover todos os itens
+
+Quando("eu removo todos os itens") do
+    @product_list.each_with_index do |value, indx| 
+        puts indx
+        cart = find("#cart")
+        cart.all("table tbody tr")[indx].find(".danger").click
+    end
+end
+
+Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
+    cart = find("#cart")
+    expect(cart).to have_text mensagem
+    sleep 5
+end
