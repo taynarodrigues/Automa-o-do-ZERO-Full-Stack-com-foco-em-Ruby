@@ -1,8 +1,5 @@
 #language: pt
 
-#executando somente a estória Adicionar ao Carrinho escrever
-#cucumber + o caminho relativo do arquivo adicionar.feature 
-#como no exemplo: cucumber features/specs/carrinho/adicionar.feature
 @bread_bakery 
 Funcionalidade: Adicionar ao carrinho
     Para que eu possa finalizar uma compra 
@@ -26,7 +23,7 @@ Funcionalidade: Adicionar ao carrinho
         Então deve ser adicionado 2 unidade(s) deste item
         E o valor total deve ser de "R$ 5,00"
 
-    @temp
+  
     Cenario: adicionar vários itens
 
         Dado que os produtos desejados são:
