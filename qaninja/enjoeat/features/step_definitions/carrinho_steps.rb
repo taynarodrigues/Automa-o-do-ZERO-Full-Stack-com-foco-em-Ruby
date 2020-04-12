@@ -20,8 +20,7 @@ end
 
 Então("o valor total deve ser de {string}") do |valor_total|
     @cart_page = CartPage.new
-    total = @cart_page.box.find('tr', text: 'Total').find('td') 
-    expect(total.text).to eql valor_total
+    expect(cart_page.total.text).to eql valor_total
 end
 
 # Lista de Produtos
@@ -55,14 +54,14 @@ Dado("que eu tenho os seguintes itens no carrinho") do |table|
 end
 
 Dado("eu removo somente o {int}") do |item|
-    @cart_page.box.all("table tbody tr")[item].find(".danger").click
+    @cart_page.remove_item(item)
 end
 
 #Remover todos os itens
 
 Quando("eu removo todos os itens") do
     @product_list.each_with_index do |value, indx| 
-        @cart_page.box.all("table tbody tr")[indx].find(".danger").click
+        @cart_page.remove_item(indx)
     end
 end
 
