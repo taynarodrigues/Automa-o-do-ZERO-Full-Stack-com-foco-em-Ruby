@@ -13,14 +13,11 @@ Quando("eu adiciono {int} unidade\\(s)") do |quantidade|
 end
 
 Então("deve ser adicionado {int} unidade\\(s) deste item") do |quantidade|
-    @cart_page = CartPage.new
-    expect(@cart_page.box).to have_text "(#{quantidade}x) #{@produto_nome}" 
-    puts "(#{quantidade}x) #{@produto_nome}"
+    expect(@rest_page.cart.box).to have_text "(#{quantidade}x) #{@produto_nome}" 
 end
 
 Então("o valor total deve ser de {string}") do |valor_total|
-    @cart_page = CartPage.new
-    expect(@cart_page.total.text).to eql valor_total
+    expect(@rest_page.cart.total.text).to eql valor_total
 end
 
 # Lista de Produtos
@@ -39,7 +36,7 @@ end
 
 Então("vejo todos os itens no carrinho") do
     @product_list.each do |p|
-        expect(@cart_page.box).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
+        expect(@rest_page.cart.box).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
     end
 end
 
@@ -54,21 +51,21 @@ Dado("que eu tenho os seguintes itens no carrinho") do |table|
 end
 
 Dado("eu removo somente o {int}") do |item|
-    @cart_page.remove_item(item)
+    @rest_page.cart.remove_item(item)
 end
 
 #Remover todos os itens
 
 Quando("eu removo todos os itens") do
     @product_list.each_with_index do |value, indx| 
-        @cart_page.remove_item(indx)
+        @rest_page.cart.remove_item(indx)
     end
 end
 
 Quando("eu limpo o meu carrinho") do
-    @cart_page.clean
+    @rest_page.cart.clean
 end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
-    expect(@cart_page.box).to have_text mensagem
+    expect(@rest_page.cart.box).to have_text mensagem
 end

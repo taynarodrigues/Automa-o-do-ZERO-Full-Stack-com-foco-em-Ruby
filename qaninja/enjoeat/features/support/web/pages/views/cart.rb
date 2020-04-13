@@ -1,6 +1,6 @@
 
 
-class CartPage #classe que vai representar o carrinho
+class CartView
     include Capybara::DSL # include Capybara::DSL conhece todos os recursos do Capybara
 
     def box #método do carrinho

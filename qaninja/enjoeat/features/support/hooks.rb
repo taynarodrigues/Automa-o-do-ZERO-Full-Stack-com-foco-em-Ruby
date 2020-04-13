@@ -3,7 +3,6 @@ Before do
 
     @rest_list_page = RestaurantListPage.new 
     @rest_page = RestaurantPage.new 
-    @cart_page = CartPage.new 
 end
 
 Before("@bread_bakery") do #before para acessar o cardápio do restaurante através da tag @bread_bakery
