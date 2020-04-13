@@ -1,13 +1,13 @@
 Dado("que acesso a lista de restaurantes") do
-    visit '/restaurants'
+    @rest_list_page.load
 end
 
 Quando("eu escolho o restaurante {string}") do |restaurante|
-    find(".restaurant-item", text: restaurante.upcase).click
+    @rest_list_page.go(restaurante)
 end
 
 Então("vejo os seguintes intens disponíveis no cardápio:") do |table|
-    items = all(".menu-item-info-box")
+    items = @rest_page.menu
 
     product_data = table.hashes
 
@@ -19,9 +19,8 @@ Então("vejo os seguintes intens disponíveis no cardápio:") do |table|
 end
 
 Então("eu vejo as seguintes informações adicionais:") do |table|
-    # puts table.rows_hash #esse table é uma linha de hash, transforma cada linha em um objeto e hash
     infos = table.rows_hash
-    detail = find('#detail')
+    detail = @rest_page.details
     expect(detail).to have_text infos["categoria"]
     expect(detail).to have_text infos["descricao"]
     expect(detail).to have_text infos["horario"]

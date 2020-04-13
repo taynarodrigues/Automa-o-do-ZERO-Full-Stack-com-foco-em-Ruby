@@ -7,10 +7,10 @@ Dado("o valor do produto é de {string}") do |valor|
 end
 
 Quando("eu adiciono {int} unidade\\(s)") do |quantidade|
-        quantidade.times do
-            find('.menu-item-info-box', text: @produto_nome.upcase).find('.add-to-cart').click
-        end
+    quantidade.times do
+        @rest_page.add_to_cart(@produto_nome)
     end
+end
 
 Então("deve ser adicionado {int} unidade\\(s) deste item") do |quantidade|
     @cart_page = CartPage.new
@@ -20,7 +20,7 @@ end
 
 Então("o valor total deve ser de {string}") do |valor_total|
     @cart_page = CartPage.new
-    expect(cart_page.total.text).to eql valor_total
+    expect(@cart_page.total.text).to eql valor_total
 end
 
 # Lista de Produtos
@@ -31,8 +31,8 @@ end
 
 Quando("eu adiciono todos os itens") do
     @product_list.each do |p|
-         p["quantidade"].to_i.times do 
-           find('.menu-item-info-box', text: p["nome"].upcase).find('.add-to-cart').click  
+        p["quantidade"].to_i.times do 
+        @rest_page.add_to_cart(p["nome"])
       end
   end
 end
@@ -66,7 +66,7 @@ Quando("eu removo todos os itens") do
 end
 
 Quando("eu limpo o meu carrinho") do
-    click_button "Limpar"
+    @cart_page.clean
 end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
