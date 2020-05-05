@@ -1,4 +1,4 @@
-#laguange: pt
+#language: pt
 Funcionalidade: Login
     Para que eu possa gerenciar os filmes do catálogo NinjaFlix
     Sendo um usuário previamente cadastrado
@@ -6,6 +6,7 @@ Funcionalidade: Login
 
     # BDD (Desenvolvimento guiado por comportamento)
 
+    @login
     Cenário: Acesso
         Quando eu faço login com "tony@stark.com" e "pwd123"
         Então devo ser autenticado
