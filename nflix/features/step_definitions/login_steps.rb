@@ -28,3 +28,4 @@ Então("devo ver a mensagem de alerta {string}") do |expect_message|
     alert = find('.alert')
     expect(alert.text).to eql expect_message
 end
+

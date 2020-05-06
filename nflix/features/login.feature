@@ -18,17 +18,20 @@ Funcionalidade: Login
         Então não devo ser autenticado
         E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
     
+     @login_hapless
     Cenário: Usuário não existe
         Quando eu faço login com "404@yahoo.com" e "abc123"
         Então não devo ser autenticado
         E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
 
+    @login_hapless
     Cenário: Email não informado
         Quando eu faço login com "" e "abcxpto"
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Ops. Cadê o email?"
-    
+        E devo ver a mensagem de alerta "Opps. Cadê o email?"
+
+    @login_hapless
     Cenário: Senha não informada
-        Quando eu faço login com "teste@gmail.com"
+        Quando eu faço login com "teste@gmail.com" e ""
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Ops. Cadê a senha?"
+        E devo ver a mensagem de alerta "Opps. Cadê a senha?"
