@@ -12,10 +12,11 @@ Funcionalidade: Login
         Então devo ser autenticado
         E devo ver "Tony Stark" na area logada
     
+    @login_hapless
     Cenário: Senha inválida
         Quando eu faço login com "tony@stark.com" e "abc123"
         Então não devo ser autenticado
-        E devo ver a mensagem de alerta "Usuarioe/ou senha inválidos"
+        E devo ver a mensagem de alerta "Usuário e/ou senha inválidos"
     
     Cenário: Usuário não existe
         Quando eu faço login com "404@yahoo.com" e "abc123"
