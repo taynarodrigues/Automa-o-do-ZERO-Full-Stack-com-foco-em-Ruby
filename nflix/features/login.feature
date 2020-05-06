@@ -6,7 +6,7 @@ Funcionalidade: Login
 
     # BDD (Desenvolvimento guiado por comportamento)
 
-    @login
+    @login_happy
     Cenário: Acesso
         Quando eu faço login com "tony@stark.com" e "pwd123"
         Então devo ser autenticado

@@ -3,7 +3,6 @@ Quando("eu faço login com {string} e {string}") do |email, password|
     find("#emailId").set email
     find("#passId").set password
     click_button "Entrar"
-    sleep 5
 
 end
 
@@ -14,6 +13,7 @@ Então("devo ser autenticado") do
     expect(token.length).to be 147
 end
 
-Então("devo ver {string} na area logada") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Então("devo ver {string} na area logada") do |expect_name|
+    user = find('.sidebar-wrapper .user .info span')
+    expect(user.text).to eql expect_name
 end
