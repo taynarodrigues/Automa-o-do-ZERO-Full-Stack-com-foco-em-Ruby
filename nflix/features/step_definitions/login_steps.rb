@@ -1,9 +1,9 @@
 Quando("eu faço login com {string} e {string}") do |email, password|
-    visit '/'
-    find("#emailId").set email
-    find("#passId").set password
-    click_button "Entrar"
-
+    @login = LoginPage.new
+    @login.go
+    @login.email.set email
+    @login.password.set password
+    @login.sign_in_button.click
 end
 
 Então("devo ser autenticado") do
